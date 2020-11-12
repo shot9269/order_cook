@@ -44,7 +44,7 @@
   margin
 }
 .header-right{
-  width: 270px;
+  display: inline-block
 }
  .login, .logout, .top-about{
   color: #4b4b4b;

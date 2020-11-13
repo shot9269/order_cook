@@ -52,8 +52,8 @@
 |Column   |  type         | options                        |
 |---------|---------------|--------------------------------|   
 |name     |  string       | null: false                    |   
-|item     |  string       | null: false                    |   
-|cook     |  string       | null: false                    |   
+|item     |  text         | null: false                    |   
+|cook     |  text         | null: false                    |   
 |user     |  references   | null: false, foreign_key: true |   
 |room     |  references   | null: false, foreign_key: true |  
 

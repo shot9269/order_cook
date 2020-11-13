@@ -1,0 +1,4 @@
+<%= form_with url: join_rooms_path, local: true do |f|%>
+<%= f.select :name, options_for_select(@rooms.pluck(:name).uniq),include_blank: '選択してください'%>
+<%= f.submit "送信"%>
+<%end%>

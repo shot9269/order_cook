@@ -1,9 +1,6 @@
 class RoomsController < ApplicationController
 
   before_action :authenticate_user!, only: :new
-  def index
-  end
-
   def about
   end
 
@@ -17,6 +14,19 @@ class RoomsController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
+  end
+
+  def serach
+    @rooms = Room.all
+  end
+  
+  def join
+    @room = Room.new(name: params[:name], user_id: current_user.id)
+    if @room.save
+      redirect_to root_path
+    else
+      render :serach
     end
   end
 

@@ -1,2 +1,14 @@
+<%# もしユーザーがルームなし状態なら見せる。ルームがあればルームメンバーを見せる %>
+<% if user_signed_in? %>
+  <% if !Room.exists?(user_id = current_user.id)%>
+    <%= link_to "ルームを作る",  new_room_path %>
+    or
+    <%= link_to "ルームを探す",serach_rooms_path %>
+  <%elsif%>
+    <%= link_to "ルームに入る"%>
+  <% end %>
+<%else%>
+  ログインして始めましょう
+<%end%>
 
-<%= link_to "ルームを作る",  new_room_path %>
+

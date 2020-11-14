@@ -4,8 +4,8 @@
     <%= link_to "ルームを作る",  new_room_path %>
     or
     <%= link_to "ルームを探す",serach_rooms_path %>
-  <%elsif%>
-    <%= link_to "ルームに入る"%>
+  <%else%>
+    <%= link_to "ルームに入る",room_menus_path(@room)%>
   <% end %>
 <%else%>
   ログインして始めましょう

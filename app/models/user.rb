@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :name, presence: true
   belongs_to :room, optional: true
-  belongs_to :menu
+  has_many :menu
+  belongs_to :room
 end

@@ -4,6 +4,10 @@ class RoomsController < ApplicationController
   def about
   end
 
+  def index
+    @room = Room.find(current_user.id) if user_signed_in?
+  end
+
   def new
     @room = Room.new
   end

@@ -9,6 +9,6 @@ Rails.application.routes.draw do
       get :serach
       post :join
     end
-    resources :menus, only: :index
+    resources :menus, only: [:index,:new,:create]
   end
 end

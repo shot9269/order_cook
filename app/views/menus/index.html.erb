@@ -1,3 +1,8 @@
 <h1>Menus#index</h1>
 <p>Find me in app/views/menus/index.html.erb</p>
 <%= @room.name %>
+<%= link_to "メニューを追加する",new_room_menu_path(room_id: @room.user_id) %>
+
+<% @menus.each do |menu|%>
+<%= menu.name%>
+<%end%>
